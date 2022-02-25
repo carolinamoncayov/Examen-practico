@@ -1,0 +1,55 @@
+<script>
+    class Persona {
+        constructor(nombre, edad) {
+            this.nombre = nombre;
+            this.edad = edad;
+    }
+    obtDetalles() {
+    console.log(this.nombre);
+    console.log(this.edad);
+  }
+    } 
+    var datos1 = new Persona ("Carolina", "30");
+
+
+
+    class Estudiante extends Persona{
+    constructor(nombre, edad, calificacion){
+        super(nombre, edad);
+        this.calificacion = calificacion;
+    }
+    obtDetalles() {
+    console.log(super.obtDetalles());
+    console.log(this.calificacion);
+   }
+}
+
+    
+    class Profesor extends Persona{
+        constructor(nombre, edad, asignatura, nivel){
+        super(nombre, edad);
+        this.asignatura = asignatura;
+        this.nivel = nivel;
+        this.fillIn = function fillIn(){
+            if(this.asignatura = ""){
+            this.asignatura = "JS"
+    }
+            if(this.nivel = ""){
+            this.nivel = "Básico"
+    }
+  }
+}
+}
+var profesor1 = new Profesor ("Historia", "Avanzado")
+  
+  class Grupo extends Profesor{
+      constructor(nombre, edad, asignatura, nivel, arrayEstudiantes){
+          super(nombre, edad, asignatura, nivel);
+          this.arrayEstudiantes = [];
+          this.calificar = function calificar (){
+              for(var i = 0; i < arrayEstudiantes.lenght; i++ ){
+            Math.floor(Math.random() * 10);
+        }
+          }
+      }
+  }

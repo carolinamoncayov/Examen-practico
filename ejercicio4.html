@@ -1,0 +1,15 @@
+<script>
+    function palindromo(str){
+        const numLetras = string.length;
+        for (let i = 0; i < numLetras / 2; i++){
+            if(string[i] !== string[numLetras - 1 - i]){
+                return "No es un palíndromo"
+            }
+        }
+        return "Sí es un palíndromo"
+    }
+    const string = prompt('Escribe tu frase y descubre si es un palíndromo: ');
+    const resultado = palindromo(string);
+
+console.log(resultado);
+</script>
